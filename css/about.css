@@ -1,0 +1,705 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: #5B5151;
+	font-family: Poppins;
+	position: relative;
+	overflow-x: hidden;
+}
+.row {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.primary-button {
+	padding: 8px 42px;
+	font-size: 18px;
+	color: #5B5151;
+	font-weight: 600;
+	margin-top: 50px;
+	background-color: #5B5151;
+}
+
+.rotation {
+	font-size: 40px;
+	transform: rotate(-90deg) !important;
+	-webkit-transform: rotate(-90deg) !important;
+	-ms-transform: rotate(-90deg) !important;
+	font-weight: 600;
+	text-align: left;
+}
+
+/* Navigation Bar */
+.header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-family: sans-serif;
+	position: absolute;
+	font-size: 18px;
+	z-index: 100;
+}
+
+.header .logo {
+	padding: 25px 40px 0px;
+}
+.header .logo img {
+	height: 50px;
+}
+
+.menu {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+.menu ul {
+    width: 100%;
+    height: inherit;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.menu ul a {
+    width: 20%;
+    height: inherit;
+    color: #222;
+    display: inline-block;
+    margin-top: 30px;
+}
+#menuToggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+        height: auto;
+    }
+    .menu ul {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        background-color: black;
+        -webkit-transition: max-height 0.3s;
+        -moz-transition: max-height 0.3s;
+        -ms-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
+        transition: max-height 0.3s;
+    }
+    .menu ul li{
+        color: white;
+    }
+    .menu ul a {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding: 10px 0px 10px 5%;
+    }
+    .menu-icon {
+        width: 100px;
+        height: inherit;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        line-height: 60px;
+    }
+    #menuToggle:checked ~ ul {
+        max-height: 100%;
+    }
+    .menu-icon i {
+        font-size: 1.7em;
+    }
+}
+
+
+/* Donate */
+.donate {
+	right: -50px;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	color: #F9B294;
+	font-size: 30px;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	z-index: 100;
+}
+.donate i {
+	transform: rotate(-90deg);
+}
+.donate div {	
+	font-weight: 600;
+	letter-spacing: 5px;
+	margin-left: 20px;
+}
+
+/* Landing Section */
+.landing-section {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+.landing-section .intro {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	font-size: 35px;
+}
+
+.about-us {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%) !important;
+	-webkit-transform: translate(-50%,-50%) !important;
+	-ms-transform: translate(-50%,-50%) !important;
+}
+
+.about-desc {
+	background-color: #FFFFFF;
+	font-size: 18px;
+	padding: 75px;
+}
+
+/* Goal Page */
+.goal-image{
+	background-size: auto 100%; 
+	background-attachment: fixed;
+}
+
+.goal-desc{
+	padding: 75px;
+	font-size: 18px;
+	background-color: #FFD5C4;
+}
+
+.quote img{
+	width: 50px; 
+	height: auto; 
+	margin: 50px 0 0 80px;
+}
+
+.quote p{
+	font-size: 22px; 
+	padding: 0 200px 80px 80px; 
+	text-indent: 100px;
+}
+
+/* Founders Page */
+.our_founders{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%) !important;
+	-webkit-transform: translate(-50%,-50%) !important;
+	-ms-transform: translate(-50%,-50%) !important;
+}
+
+.images img {
+    width: 100%;
+    height: 500px;
+	object-fit: cover;
+}
+
+/* Marquee Page */
+.marquee {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: 18px;
+}
+.marquee span {
+	font-size: 14px;
+}
+.marquee .marque-bold {
+	font-size: 20px;
+	margin-left: 200px;
+}
+
+/* Footer */
+.footer {
+	background-color: #5B5151;
+	padding: 50px 0px 40px;
+}
+.footer span {
+	font-size: 35px;
+}
+.footer form{ 
+	width: 600px; 
+	margin: 40px auto;
+}
+.footer input {
+	width: 100%;
+	font-size: 12px;
+	padding: 10px;
+	border: 5px solid #FFFFFF;
+}
+.footer button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 5px solid #FFFFFF;
+}
+.footer .social {
+	font-size: 24px;
+	width: 600px;
+	 margin: 60px auto 0px !important;
+}	
+.footer-line{
+	background-color: #3C3737; 
+	font-size: 12px;
+}
+.footer-line .row {
+	width: 80%;
+	margin: 15px auto !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1250px){
+	/* Landing Page */
+	.landing-section .intro {
+		position: relative;
+		padding: 150px;
+		font-size: 30px;
+	}
+
+	/* About Page */
+	.about-desc{
+        font-size: 15px;
+    }
+
+    .rotation{
+        font-size: 30px;
+	}
+	.goal-desc{
+		font-size: 15px;
+	}
+	
+	/* Founders Page */
+	.images img {
+        height: 350px;
+    }
+    
+    .quote p{
+        font-size: 18px; 
+        padding: 0 80px 80px; 
+        text-indent: 70px;
+    } 
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+	/* Landing Page */
+	.landing-section .intro {
+		position: relative;
+		padding: 150px;
+		font-size: 25px;
+	}
+
+	/* About us Page */
+	.about-us {
+		position: relative;
+		left: 50%;
+		top: 50%;
+	}
+	.about-desc{
+		font-size: 15px;
+		padding: 60px;
+	}
+
+	/* Goal Page */
+	.goal-image{ 
+		background-size: cover; 
+		background-attachment: fixed;
+		height: 500px;
+	}
+	
+	.goal-desc{
+		font-size: 15px;
+		padding: 60px;
+	}
+
+	/* Founders Page */
+	.our_founders{
+        position: relative;
+    }
+    
+    .rotation{
+        font-size: 30px;
+        transform: rotate(0deg) !important;
+        -webkit-transform: rotate(0deg) !important;
+        -ms-transform: rotate(0deg) !important;
+        padding: 35px;
+    }
+
+    .images img {
+        height: 320px;
+    }
+    
+    .quote img{
+        width: 40px;
+        margin: 50px 0 0 80px;
+    }
+    
+    .quote p{
+        font-size: 18px; 
+        padding: 0 80px 80px; 
+        text-indent: 70px;
+    }
+}
+
+/* Small Tablets - Tablets */ 
+@media screen and (min-width: 576px) and (max-width: 768px){
+	/* Header*/
+	.header .logo {
+		padding: 20px 30px 0px;
+	}
+
+	.header .logo img{
+		height: 45px;
+	}
+
+	.landing-section .intro {
+		position: relative;
+		padding: 150px;
+		font-size: 30px;
+	}
+
+	.landing-image{
+		height: 400px;
+	}
+
+	/* Donate */
+    .donate {
+		top: 40%;
+        font-size: 25px;
+    }
+
+	/* About us Section */	
+	.about-us {
+		position: relative;
+	}
+	
+	.about-desc{
+		font-size: 15px;
+		padding: 50px;
+	}
+
+	/* Goal Page */
+	.goal-image{ 
+		 
+		background-attachment: fixed;
+		height: 450px;
+	}
+	
+	.goal-desc{
+		font-size: 15px;
+		padding: 50px;
+		background-color: #FFD5C4;
+	}
+
+	/* Founders Page */
+	.our_founders{
+        position: relative;
+    }
+    
+    .rotation{
+        font-size: 30px;
+        transform: rotate(0deg) !important;
+        -webkit-transform: rotate(0deg) !important;
+        -ms-transform: rotate(0deg) !important;
+        padding: 35px;
+	}
+	
+	.images img {
+        height: 270px;
+	}
+	
+	.quote img{
+        width: 40px;
+        margin: 50px 0 0 80px;
+    }
+    
+    .quote p{
+        font-size: 18px; 
+        padding: 0 80px 80px; 
+        text-indent: 70px;
+    }
+
+	/* Footer Page */
+    .footer span{
+        font-size: 30px;
+    }
+
+    .footer .social {
+        font-size: 20px;
+    }
+
+    .footer form{ 
+        width: 500px; 
+    }
+    .footer input {
+        font-size: 10px;
+    }
+    .footer-line{
+        font-size: 10px;
+    }
+
+    .footer .primary-button {
+        font-size: 15px;
+    }
+} 
+
+/* Mobile screens */
+@media screen and (min-width: 435px) and (max-width: 576px){
+	/* Header */
+	.header .logo {
+		padding: 20px 40px 0px;
+	}
+	.header .logo img {
+		height: 45px;
+	}
+
+	/* Landing Section */
+	.landing-section {
+		background-size: 100% 100%;
+	}
+	.landing-section .intro {
+		position: relative;
+		padding: 100px;
+		font-size: 25px;
+	}
+	.landing-image{
+		height: 300px;
+	}
+
+	/* Donate */
+    .donate {
+		top: 30%;
+        font-size: 22px;
+    }
+
+	/* About Page */
+	.about-us {
+		position: relative;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%) !important;
+		-webkit-transform: translate(-50%,-50%) !important;
+		-ms-transform: translate(-50%,-50%) !important;
+	}
+	
+	.about-desc{
+		font-size: 15px;
+		padding: 40px;
+	}
+
+	/* Goal Page */
+	.goal-image{ 
+		 
+		background-attachment: fixed;
+		height: 400px;
+	}
+	.goal-desc{
+		font-size: 15px;
+		padding: 40px;
+		background-color: #FFD5C4;
+	}
+
+	/* Founders Page */
+	.our_founders{
+        position: relative;
+    }
+    
+    .rotation{
+        font-size: 30px;
+        transform: rotate(0deg) !important;
+        -webkit-transform: rotate(0deg) !important;
+        -ms-transform: rotate(0deg) !important;
+        padding: 30px;
+    }
+    
+    .images img {
+        height: 230px;
+    }
+
+	.quote img{
+        width: 35px;
+        margin: 50px 0 0 80px;
+    }
+    
+    .quote p{
+        font-size: 18px; 
+        padding: 0 80px 80px; 
+        text-indent: 70px;
+    }
+	
+	/* Marquee Tag */
+	.marquee {
+		font-size: 15px;
+	}
+	.marquee .marque-bold {
+		font-size: 16px;
+	}
+
+	/* Footer Page */
+    .footer span{
+        font-size: 25px;
+    }
+    .footer .social {
+        font-size: 20px;
+        width: auto;
+    }
+    .footer form{ 
+        width: 80%; 
+    }
+    .footer input {
+        font-size: 10px;
+    }
+    .footer-line{
+        font-size: 10px;
+    }
+
+    .footer .primary-button {
+        font-size: 13px;
+    }
+} 
+
+/* Small Mobile Screens */
+@media screen and (max-width: 435px){
+	/* Header */
+	.header .logo {
+		height: 100%;
+		padding: 25px 40px 0px;
+	}
+	
+	.header .logo img {
+		height: 44px;
+	}
+
+	/* Donate Page */
+	.donate{
+		font-size: 20px;
+	}
+	.landing-section {
+		background-size: 100% 100%;
+	}
+	.landing-section .intro {
+		position: relative;
+		padding: 120px 50px;
+		font-size: 25px;
+	}
+
+	.landing-image{
+		height: 250px;
+	}
+	
+	/* Donate */
+    .donate {
+		top: 30%;
+        font-size: 20px;
+    }
+
+	/* About Page */
+	.about-us {
+		position: relative;
+	}
+	
+	.about-desc{
+		font-size: 15px;
+		padding: 30px;
+	}
+	
+	/* Goal Page */
+	.goal-image{ 
+		 
+		background-attachment: fixed;
+		height: 350px;
+	}
+	
+	.goal-desc{
+		font-size: 15px;
+		padding: 30px;
+		background-color: #FFD5C4;
+	}
+
+	/* Founders Page */
+	.our_founders{
+        position: relative;
+    }
+    
+    .rotation{
+        font-size: 25px;
+        transform: rotate(0deg) !important;
+        -webkit-transform: rotate(0deg) !important;
+        -ms-transform: rotate(0deg) !important;
+        padding: 30px;
+    }
+
+    .images img {
+        height: 200px;
+    }
+
+	.quote img{
+        width: 20px;
+        margin: 50px 0 0 60px;
+	}
+
+	.quote p{
+		font-size: 15px;  
+		text-indent: 70px;
+		padding: 0px 50px 30px; 
+	}
+
+	/* Marquee Tag */
+	.marquee {
+		font-size: 15px;
+	}
+	.marquee .marque-bold {
+		font-size: 15px;
+	}
+
+    /* Footer */
+    .footer span {
+        font-size: 20px;
+    }
+
+    .footer .social{
+        font-size: 15px;
+        width: auto;
+    }
+    .footer form{ 
+        width: 80%; 
+    }
+    .footer input {
+        font-size: 10px;
+    }
+    .footer-line{
+        font-size: 7px;
+    }
+
+    .footer .primary-button {
+        font-size: 13px;
+    }
+}

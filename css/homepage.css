@@ -1,0 +1,901 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+}
+body {
+	font-family: Poppins;
+	position: relative;
+	overflow-x: hidden;
+}
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.primary-button {
+	padding: 8px 42px;
+	font-size: 18px;
+	color: #5B5151;
+	font-weight: 600;
+	margin-top: 50px;
+}
+.primary-button p:nth-child(2) {
+	font-size: 12px;
+}
+
+/* Navigation Bar */
+.header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-family: sans-serif;
+	position: absolute;
+	font-size: 18px;
+	z-index: 100;
+}
+
+.header .logo {
+    height: 100%;
+    padding: 25px 40px 0px;
+}
+
+.header .logo img {
+	height: 50px;
+}
+
+.menu {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+.menu ul {
+    width: 100%;
+    height: inherit;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.menu ul a {
+    width: 20%;
+    height: inherit;
+    color: #222;
+    display: inline-block;
+    margin-top: 30px;
+}
+#menuToggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+        height: auto;
+    }
+    .menu ul {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        background-color: black;
+        -webkit-transition: max-height 0.3s;
+        -moz-transition: max-height 0.3s;
+        -ms-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
+        transition: max-height 0.3s;
+    }
+    .menu ul li{
+        color: white;
+    }
+    .menu ul a {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding: 10px 0px 10px 5%;
+    }
+    .menu-icon {
+        width: 100px;
+        height: inherit;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        line-height: 60px;
+    }
+    #menuToggle:checked ~ ul {
+        max-height: 100%;
+    }
+    .menu-icon i {
+        font-size: 1.7em;
+    }
+}
+
+.heading {
+	font-size: 40px;
+	font-weight: 600;
+}
+.marquee {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: 18px;
+}
+.marquee span {
+	font-size: 14px;
+}
+.rotation {
+	font-size: 40px;
+	transform: rotate(-90deg) !important;
+	font-weight: 600;
+}
+.position-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%) !important;
+}
+
+/* Donate */
+.donate {
+	right: -50px;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	color: #F9B294;
+	font-size: 30px;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	z-index: 100;
+}
+.donate i {
+	transform: rotate(-90deg);
+}
+.donate div {	
+	font-weight: 600;
+	letter-spacing: 5px;
+	margin-left: 20px;
+}
+
+/* Landing Section */
+.landing-section {
+	position: relative;
+	background-size: cover;
+	background-attachment: fixed;
+	background-origin: content-box;
+	background-repeat: no-repeat;
+}
+.headline {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	font-weight: 600;
+	font-size: 50px;
+}
+.headline span {
+	font-family: Lato;
+	font-size: 14px;
+	letter-spacing: 10px;
+}
+
+/* About Us Section */
+.about-background {
+    background-size: cover;
+}
+.about-desc{
+    font-size: 18px;
+    padding: 70px;
+}
+.about-desc .primary-button{
+    line-height: 10px;
+    padding-bottom: 0px;
+    padding-top: 15px;
+}
+.about span {
+	font-family: Lato;
+	font-size: 12px;
+	letter-spacing: 5px;
+}
+
+/* Causes Section */
+.causes img{
+	width: 100%;
+	object-fit: cover;
+}
+.causes .view {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%) !important;
+}
+.causes .rotation{
+    font-size: 40px;
+    padding: 50px 0px 50px 0px;
+	transform: rotate(-90deg) !important;
+	font-weight: 600;
+}
+.causes .news {
+	font-size: 18px;
+	padding: 70px;
+}
+.causes .news span {
+	font-size: 35px;
+	font-weight: 600;
+}
+.causes .news button {
+	font-weight: normal;
+}
+.causes .news span {
+	font-size: 35px;
+	font-weight: 600;
+}
+
+/* Stories Section */
+.stories {
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+    font-size: 18px;
+    height: 500px;
+}
+
+.stories-cover{
+    height: 100%;
+    width: 100%;
+    opacity: .5; 
+    background-color: #5B5151; 
+    z-index: -1;
+}
+
+.stories .desc {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+}
+
+/* Support Section */
+.support {
+	width: 80%;
+	margin: 80px auto;
+}
+.support .feature_area {
+	padding-bottom: 100px;
+}
+@media (max-width: 991px) {
+	.support .feature_area {
+		padding-bottom: 40px;
+	} 
+}
+
+.support .single_feature {
+	position: relative;
+	text-align: center;
+	background: #FFFBF9;
+	padding: 40px 36px;
+	margin-bottom: 30px;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+@media (max-width: 480px) {
+	.support .single_feature {
+		padding: 40px 20px;
+	}
+}
+.support .single_feature .icon span {
+	font-size: 100px;
+	font-style: normal;
+	margin-left: 0px;
+	color: #F9B294;
+}
+.support .single_feature h4 {
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+.support .single_feature p {
+	font-size: 18px;
+	margin-bottom: 0px;
+}
+.support .single_feature:hover {
+	box-shadow: 0px 10px 30px rgba(0, 35, 71, 0.1);
+}
+
+/* Footer */
+.footer {
+	background-color: #5B5151;
+	padding: 50px 0px 40px;
+}
+.footer span {
+	font-size: 35px;
+}
+.footer form{ 
+	width: 600px; 
+	margin: 40px auto;
+}
+.footer input {
+	width: 100%;
+	font-size: 12px;
+	padding: 10px;
+	border: 5px solid #FFFFFF;
+}
+.footer button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 5px solid #FFFFFF;
+}
+.footer .social {
+	font-size: 24px;
+	width: 600px;
+	margin: 60px auto 0px !important;
+}	
+.footer-line{
+	background-color: #3C3737; 
+	font-size: 12px;
+}
+.footer-line .row {
+	width: 80%;
+	margin: 15px auto !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1250px){
+    /* About us Section */
+
+
+    /*Causes Section */
+    .causes .view{
+        position: relative;
+    }
+
+    .causes .rotation{
+        font-size: 40px;
+        padding: 50px 30px;
+    }
+
+    .rotation .primary-button {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .causes .rotation{
+        font-size: 40px;
+        transform: rotate(-90deg) !important;
+        font-weight: 600;
+    }
+    .causes .news {
+        font-size: 18px;
+    }
+
+    .causes .news span {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .news .primary-button{
+        font-size: 16px;
+        padding: 8px 42px;
+        margin-top: 40px;
+    }
+
+    .news .primary-button p:nth-child(2) {
+        font-size: 8px;
+    }
+
+    /* Stories Section */
+    .stories {
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        font-size: 18px;
+        height: 400px;
+    }
+
+    .stories .heading{
+        font-size: 35px;
+    }
+
+    .stories .primary-button {
+        padding: 8px 42px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    /* Landing Section */
+    .landing-section {
+        position: relative;
+    }
+    .headline {
+        font-size: 40px;
+    }
+
+    /* About Us Section */
+    .about-background {
+        height: 350px;
+    }
+    .about-desc{
+        font-size: 15px;
+        padding: 60px;
+    }
+    .about span {
+        font-size: 10px;
+    }
+    
+    /* Causes Section */
+    .causes .view{
+        position: relative;
+    }
+
+    .causes .rotation{
+        font-size: 40px;
+        padding: 70px;
+    }
+
+    .rotation .primary-button {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .causes .rotation{
+        font-size: 35px;
+        transform: rotate(-90deg) !important;
+        font-weight: 600;
+    }
+    .causes .news {
+        font-size: 15px;
+        padding: 60px;
+    }
+
+    .causes .news span {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .news .primary-button{
+        font-size: 15px;
+        padding: 8px 42px;
+        margin-top: 40px;
+    }
+
+    .news .primary-button p:nth-child(2) {
+        font-size: 8px;
+    }
+
+    /* Stories Section */
+    .stories {
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        font-size: 18px;
+        height: 350px;
+    }
+
+    .stories .heading{
+        font-size: 35px;
+    }
+
+    .stories .primary-button {
+        padding: 8px 42px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 768px){
+    /* About Us Section */
+    .about-background {
+        height: 420px;
+    }
+    .about-desc{
+        font-size: 15px;
+        padding: 60px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    /* Header*/
+	.header .logo {
+		width: auto;
+		float: left;
+		padding: 20px 30px 0px;
+	}
+
+	.header .logo img{
+		height: 45px;
+	}
+
+    /* Landing Section */
+    .landing-section {
+        position: relative;
+    }
+    .headline {
+        font-size: 35px;
+    }
+    .headline span {
+        font-size: 12px;
+    }
+
+    /* Donate */
+    .donate {
+        font-size: 25px;
+    }
+    
+    /* About Us Section */
+    .about-background {
+        height: 370px;
+    }
+    .about-desc{
+        font-size: 15px;
+        padding: 50px;
+    }
+
+    /* Causes Section */
+    .causes .view {
+        position: relative;
+    }
+    .causes .rotation{
+        font-size: 35px;
+        transform: rotate(0deg) !important;
+        font-weight: 600;
+    }
+    .causes .news {
+        font-size: 15px;
+        padding: 50px;
+    }
+    .causes .news span {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .primary-button {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .news .primary-button{
+        font-size: 16px;
+        padding: 8px 42px;
+        margin-top: 50px;
+    }
+
+    .news .primary-button p:nth-child(2) {
+        font-size: 10px;
+    }
+
+    /* Stories Section */
+    .stories {
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        font-size: 15px;
+        height: 300px;
+    }
+
+    .stories .heading{
+        font-size: 30px;
+    }
+
+    .stories .primary-button {
+        padding: 8px 42px;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    /* Suppport Page */
+    .support .heading {
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .support .single_feature h4 {
+        font-size: 18px;
+    }
+    .support .single_feature p {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+	
+	/* Footer Page */
+    .footer span{
+        font-size: 30px;
+    }
+
+    .footer .social {
+        font-size: 20px;
+    }
+
+    .footer form{ 
+        width: 500px; 
+    }
+    .footer input {
+        font-size: 10px;
+    }
+    .footer-line{
+        font-size: 10px;
+    }
+
+    .footer .primary-button {
+        font-size: 15px;
+    }
+} 
+
+@media screen and (min-width: 435px) and (max-width: 576px){
+    /* Header */
+	.header .logo {
+		padding: 20px 40px 0px;
+	}
+	.header .logo img {
+		height: 45px;
+    }
+    
+    /* Landing Section */
+    .landing-section {
+        position: relative;
+    }
+    .headline {
+        font-size: 35px;
+    }
+    .headline span {
+        font-size: 12px;
+    }
+
+    /* Donate */
+    .donate {
+        font-size: 22px;
+    }
+
+    /* About Us Section */
+    .about-background {
+        height: 320px;
+    }
+    .about-desc{
+        font-size: 15px;
+        padding: 40px;
+    }
+    .about span{
+        font-size: 10px;
+    }
+
+    /* Causes Section */
+    .causes .view {
+        position: relative;
+    }
+    .causes .rotation{
+        font-size: 35px;
+        transform: rotate(0deg) !important;
+        font-weight: 600;
+    }
+    .causes .news {
+        font-size: 15px;
+        padding: 40px;
+    }
+    .causes .news span {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .primary-button {
+        font-size: 15px;
+        margin-top: 40px;
+    }
+
+    .news .primary-button{
+        font-size: 16px;
+        padding: 8px 30px;
+        margin-top: 40px;
+    }
+
+    .news .primary-button p:nth-child(2) {
+        font-size: 10px;
+    }
+    
+    /* Stories Section */
+    .stories {
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        font-size: 12px;
+        height: 250px;
+    }
+
+    .stories .heading{
+        font-size: 25px;
+    }
+
+    .stories .primary-button {
+        padding: 8px 40px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    /* Suppport Page */
+    .support .heading {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .support .single_feature h4 {
+        font-size: 17px;
+    }
+    .support .single_feature p {
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+	
+	/* Footer Page */
+    .footer span{
+        font-size: 25px;
+    }
+
+    .footer .social {
+        font-size: 20px;
+        width: auto;
+    }
+
+    .footer form{ 
+        width: 80%; 
+    }
+    .footer input {
+        font-size: 10px;
+    }
+    .footer-line{
+        font-size: 10px;
+    }
+
+    .footer .primary-button {
+        font-size: 13px;
+    }
+} 
+
+@media screen and (max-width: 435px){
+    /* Header */
+	.header .logo {
+		padding: 25px 40px 0px;
+	}
+	.header .logo img {
+		height: 40px;
+    }
+    
+    /* Landing Section */
+    .landing-section {
+        position: relative;
+    }
+    .headline {
+        font-size: 35px;
+    }
+    .headline span {
+        font-size: 10px;
+    }
+
+    /* Donate */
+    .donate {
+        font-size: 20px;
+    }
+
+    /* About Us Section */
+    .about-background {
+        height: 250px;
+    }
+    .about-desc{
+        font-size: 15px;
+        padding: 30px;
+    }
+    .about span{
+        font-size: 10px;
+    }
+
+    .about .primary-button{
+        line-height: 1px;
+        padding-bottom: 0px;
+        padding-top: 15px;
+    }
+
+    /* Causes Section */
+    .causes .view {
+        position: relative;
+    }
+    .causes .rotation{
+        font-size: 25px;
+        transform: rotate(0deg) !important;
+        font-weight: 600;
+    }
+    .causes .news {
+        font-size: 15px;
+        padding: 30px;
+    }
+    .causes .news span {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .causes .news button {
+        font-weight: normal;
+    } 
+
+    .primary-button {
+        font-size: 15px;
+        padding: 5px 20px;
+        margin-top: 20px;
+    }
+
+    .news .primary-button{
+        font-size: 15px;
+        padding: 8px 30px;
+        margin-top: 40px;
+    }
+
+    .primary-button p:nth-child(2) {
+        font-size: 8px;
+    }
+    
+    /* Stories Section */
+    .stories {
+        background-attachment: scroll;
+        background-size: cover;
+        position: relative;
+        font-size: 10px;
+        height: 250px;
+    }
+
+    .stories .heading{
+        font-size: 25px;
+    }
+
+    .stories .primary-button {
+        padding: 8px 40px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    /* Suppport Page */
+    .support .heading {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .support .single_feature h4 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .support .single_feature p {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+	
+    /* Footer */
+    .footer span {
+        font-size: 20px;
+    }
+
+    .footer .social{
+        font-size: 15px;
+        width: auto;
+    }
+    .footer form{ 
+        width: 80%; 
+    }
+    .footer input {
+        font-size: 10px;
+    }
+    .footer-line{
+        font-size: 7px;
+    }
+
+    .footer .primary-button {
+        font-size: 13px;
+    }
+}
